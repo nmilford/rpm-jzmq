@@ -1,7 +1,7 @@
 # sudo yum -y install rpmdevtools && rpmdev-setuptree
 # sudo yum -y install libtool automake autoconf
 # wget https://raw.github.com/nmilford/rpm-jzmq/master/jzmq.spec -O ~/rpmbuild/SPECS/jzmq.spec
-# wget http://nodeload.github.com/nathanmarz/jzmq/tarball/master -O ~/rpmbuild/SOURCES/jzmq-2.1.0.tar.gz
+# wget https://codeload.github.com/nathanmarz/jzmq/zip/master -O ~/rpmbuild/SOURCES/jzmq-2.1.0.zip
 # rpmbuild -bb ~/rpmbuild/SPECS/jzmq-2.1.0.spec
 
 Name:          jzmq
@@ -11,7 +11,7 @@ Summary:       The Java ZeroMQ bindings
 Group:         Applications/Internet
 License:       LGPLv3+
 URL:           http://www.zeromq.org/
-Source:        %{name}-%{version}.tar.gz
+Source:        %{name}-%{version}.zip
 Prefix:        %{_prefix}
 Buildroot:     %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: gcc, make, gcc-c++, libstdc++-devel, libtool, zeromq-devel, jdk
@@ -43,7 +43,7 @@ multiple transport protocols and more.
 This package contains Java Bindings for ZeroMQ related development libraries and header files.
 
 %prep
-%setup -n nathanmarz-jzmq-dd3327d
+%setup -n jzmq-master
 
 %build
 export JAVA_HOME=/usr/java/default/

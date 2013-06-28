@@ -11,6 +11,6 @@ To Build:
 
 `wget https://raw.github.com/nmilford/rpm-jzmq/master/jzmq.spec -O ~/rpmbuild/SPECS/jzmq.spec`
 
-`wget http://nodeload.github.com/nathanmarz/jzmq/tarball/master -O ~/rpmbuild/SOURCES/jzmq-2.1.0.tar.gz`
+`wget https://codeload.github.com/nathanmarz/jzmq/zip/master -O ~/rpmbuild/SOURCES/jzmq-2.1.0.zip`
 
 `rpmbuild -bb ~/rpmbuild/SPECS/jzmq-2.1.0.spec`
